@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="IA de conversa executada localmente no navegador.">
+  <title>IA Local Privada</title>
+
+  <link rel="stylesheet" href="./styles/style.css?v=7">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+</head>
+<body>
+  <main id="chat-container">
+    <header class="app-header">
+      <div>
+        <h1>IA Local</h1>
+        <p>Conversa temporária no aparelho</p>
+      </div>
+
+      <div class="header-actions">
+        <button id="new-chat-btn" type="button" disabled>Novo chat</button>
+        <span id="status-dot" aria-hidden="true"></span>
+      </div>
+    </header>
+
+    <section id="chat-history" aria-live="polite" aria-label="Histórico da conversa atual"></section>
+
+    <section id="status-bar">
+      <span id="ai-status">Preparando aplicação...</span>
+      <progress id="download-progress" value="0" max="100" hidden></progress>
+    </section>
+
+    <form id="input-area">
+      <textarea
+        id="user-input"
+        placeholder="Digite sua mensagem..."
+        rows="1"
+        disabled
+      ></textarea>
+      <button id="send-btn" type="submit" disabled>Enviar</button>
+    </form>
+  </main>
+
+  <script src="./app.js?v=7" type="module"></script>
+</body>
+</html>
