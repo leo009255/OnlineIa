@@ -1,5 +1,6 @@
 const WEBLLM_URL = 'https://esm.run/@mlc-ai/web-llm@0.2.84';
-const MODEL_ID = "SmolLM2-1.7B-Instruct-q4f16_1-MLC";
+const SELECTED_MODEL = "SmolLM2-1.7B-Instruct-q4f16_1-MLC";
+
 const BASE_SYSTEM_PROMPT = `
 Você é uma companhia de conversa local e privada, executada no aparelho do usuário.
 
